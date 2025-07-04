@@ -20,10 +20,15 @@ It contains order-level data with columns like:
 Performed using **Pandas** library.
 
 ### ✅ Key Steps:
-- Installed and used **Kaggle API** to download dataset
-- Standardized column names (lowercase, underscore-separated)
-- Handled null values (`'Not Available'`, `'unknown'`)
-- Basic exploratory checks (`.info()`, `.describe()`, `.isnull().sum()`)
+| Step | Description |
+|------|-------------|
+| 📥 Dataset Load | Downloaded via Kaggle API using `kaggle` module |
+| 🧹 Data Cleaning | Standardized column names to lowercase with underscores; handled null values (`'Not Available'`, `'unknown'`) |
+| 📊 Feature Engineering | Created new columns: `discount`, `sale_price`, `profit` using formulas |
+| 📅 Date Conversion | Converted `order_date` to proper datetime format |
+| 🗑️ Column Drop | Removed unnecessary columns: `cost_price`, `list_price`, `discount_percent` |
+| 🔁 Duplicates Removal | Removed duplicate rows to avoid skew in analysis |
+| 🔍 Exploratory Checks | Used `.unique()`, `.info()`, `.describe()`, and `sample()` to understand data distribution |
 
 
 ---
